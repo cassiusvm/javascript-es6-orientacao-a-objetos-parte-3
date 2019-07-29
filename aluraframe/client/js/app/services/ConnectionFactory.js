@@ -1,4 +1,6 @@
-var ConnectionFactory = (function () {
+'use strict';
+
+var ConnectionFactory = function () {
     const stores = ['negociacoes'];
     const version = 4;
     const dbName = 'aluraframe';
@@ -57,8 +59,8 @@ var ConnectionFactory = (function () {
             if (connection) {
                 close();
                 connection = null;
-
             }
         }
-    }
-})();
+    };
+}();
+//# sourceMappingURL=ConnectionFactory.js.map

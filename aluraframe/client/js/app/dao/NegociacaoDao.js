@@ -1,3 +1,5 @@
+'use strict';
+
 class NegociacaoDao {
     constructor(connection) {
         this._connection = connection;
@@ -6,10 +8,7 @@ class NegociacaoDao {
 
     adiciona(negociacao) {
         return new Promise((resolve, reject) => {
-            let request = this._connection
-                .transaction([this._store], 'readwrite')
-                .objectStore(this._store)
-                .add(negociacao);
+            let request = this._connection.transaction([this._store], 'readwrite').objectStore(this._store).add(negociacao);
 
             request.onsuccess = e => {
                 resolve();
@@ -24,10 +23,7 @@ class NegociacaoDao {
 
     listaTodos() {
         return new Promise((resolve, reject) => {
-            let cursor = this._connection
-                .transaction([this._store], 'readwrite')
-                .objectStore(this._store)
-                .openCursor();
+            let cursor = this._connection.transaction([this._store], 'readwrite').objectStore(this._store).openCursor();
 
             let negociacoes = [];
 
@@ -54,10 +50,7 @@ class NegociacaoDao {
 
     apagaTodos() {
         return new Promise((resolve, reject) => {
-            let request = this._connection
-                .transaction([this._store], 'readwrite')
-                .objectStore(this._store)
-                .clear();
+            let request = this._connection.transaction([this._store], 'readwrite').objectStore(this._store).clear();
 
             request.onsuccess = e => resolve('Negociações removidas com sucesso');
 
@@ -68,3 +61,4 @@ class NegociacaoDao {
         });
     }
 }
+//# sourceMappingURL=NegociacaoDao.js.map

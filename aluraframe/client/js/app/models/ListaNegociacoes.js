@@ -1,3 +1,5 @@
+"use strict";
+
 class ListaNegociacoes {
 
     constructor() {
@@ -31,3 +33,4 @@ class ListaNegociacoes {
         this._negociacoes.reverse();
     }
 }
+//# sourceMappingURL=ListaNegociacoes.js.map

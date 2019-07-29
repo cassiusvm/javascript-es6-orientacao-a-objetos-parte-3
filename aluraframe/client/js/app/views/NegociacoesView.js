@@ -1,3 +1,5 @@
+'use strict';
+
 class NegociacoesView extends View {
     template(model) {
         return `
@@ -30,3 +32,4 @@ class NegociacoesView extends View {
         `;
     }
 }
+//# sourceMappingURL=NegociacoesView.js.map

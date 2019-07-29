@@ -1,3 +1,5 @@
+"use strict";
+
 class Negociacao {
     constructor(data, quantidade, valor) {
         this._data = new Date(data.getTime());
@@ -22,7 +24,8 @@ class Negociacao {
         return this._valor;
     }
 
-    isEquals(outraNegociacao) {        
-        return JSON.stringify(this) == JSON.stringify(outraNegociacao)
+    isEquals(outraNegociacao) {
+        return JSON.stringify(this) == JSON.stringify(outraNegociacao);
     }
 }
+//# sourceMappingURL=Negociacao.js.map

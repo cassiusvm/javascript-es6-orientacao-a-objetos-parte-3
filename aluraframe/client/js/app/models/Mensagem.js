@@ -1,3 +1,5 @@
+'use strict';
+
 class Mensagem {
 
     constructor(texto = '') {
@@ -15,3 +17,4 @@ class Mensagem {
         this._texto = texto;
     }
 }
+//# sourceMappingURL=Mensagem.js.map

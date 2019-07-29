@@ -1,3 +1,5 @@
+'use strict';
+
 class View {
     constructor(elemento) {
         this._elemento = elemento;
@@ -11,3 +13,4 @@ class View {
         this._elemento.innerHTML = this.template(model);
     }
 }
+//# sourceMappingURL=View.js.map

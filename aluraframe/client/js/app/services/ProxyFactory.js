@@ -1,3 +1,5 @@
+"use strict";
+
 class ProxyFactory {
 
   static create(objeto, props, acao) {
@@ -12,7 +14,7 @@ class ProxyFactory {
             console.log(`a propriedade "${prop}" foi interceptada`);
             Reflect.apply(target[prop], target, arguments);
             return acao(target);
-          }
+          };
         }
         return Reflect.get(target, prop, receiver);
       },
@@ -25,12 +27,12 @@ class ProxyFactory {
 
         return Reflect.set(target, prop, value, receiver);
       }
-    })
+    });
   }
 
   static _ehFuncao(func) {
 
-    return typeof (func) == typeof (Function);
-
+    return typeof func == typeof Function;
   }
 }
+//# sourceMappingURL=ProxyFactory.js.map

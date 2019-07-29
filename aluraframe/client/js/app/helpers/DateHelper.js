@@ -1,3 +1,5 @@
+'use strict';
+
 class DateHelper {
     constructor() {
         throw new Error('DateHelper não pode ser instanciada');
@@ -14,3 +16,4 @@ class DateHelper {
         return new Date(...texto.split('-').map((item, indice) => item - indice % 2));
     }
 }
+//# sourceMappingURL=DateHelper.js.map
