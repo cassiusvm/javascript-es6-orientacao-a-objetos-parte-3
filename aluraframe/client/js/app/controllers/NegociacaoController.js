@@ -17,6 +17,10 @@ class NegociacaoController {
 
         this._ordemAtual = ''
 
+        this._init();
+    }
+
+    _init() {
         ConnectionFactory
             .getConnection()
             /*
@@ -39,6 +43,10 @@ class NegociacaoController {
                 console.log(erro);
                 this._mensagem.texto = error;
             });
+
+        setInterval(() => {
+            this.importaNegociacoes();
+        }, 3000);
     }
 
     adiciona(event) {
